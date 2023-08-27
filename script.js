@@ -2,19 +2,24 @@ function playGame(playerChoice) {
     const choices = ['rock', 'paper', 'scissors'];
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
   
-    const resultText = document.getElementById("result-text");
+    let resultMessage = "It's a tie!";
+    if (
+      (playerChoice === "rock" && computerChoice === "scissors") ||
+      (playerChoice === "paper" && computerChoice === "rock") ||
+      (playerChoice === "scissors" && computerChoice === "paper")
+    ) {
+      resultMessage = `You win! ${playerChoice} beats ${computerChoice}.`;
+    } else if (
+      (playerChoice === "scissors" && computerChoice === "rock") ||
+      (playerChoice === "rock" && computerChoice === "paper") ||
+      (playerChoice === "paper" && computerChoice === "scissors")
+    ) {
+      resultMessage = `You lose! ${computerChoice} beats ${playerChoice}.`;
+    }
+  
+    const resultText = document.getElementById("resulttext");
     if (resultText) {
-      if (playerChoice === computerChoice) {
-        resultText.textContent = "It's a tie!";
-      } else if (
-        (playerChoice === "rock" && computerChoice === "scissors") ||
-        (playerChoice === "paper" && computerChoice === "rock") ||
-        (playerChoice === "scissors" && computerChoice === "paper")
-      ) {
-        resultText.textContent = `You win! ${playerChoice} beats ${computerChoice}.`;
-      } else {
-        resultText.textContent = `You lose! ${computerChoice} beats ${playerChoice}.`;
-      }
+      resultText.textContent = resultMessage;
     }
   
     const resultContainer = document.querySelector(".resultcontainer");
