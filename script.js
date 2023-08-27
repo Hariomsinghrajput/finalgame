@@ -20,9 +20,9 @@ function playGame(playerChoice) {
       
     const resultTexts=document.getElementById("#resulttext") 
      document.writeln(resultMessage)  
-     resultTexts.textContent = resultMessage;
-      const resultContainers = document.querySelector(".resultcontainer");
-      resultContainers.style.display = "block";
+    //  resultTexts.textContent = resultMessage;
+    //   const resultContainers = document.querySelector(".resultcontainer");
+    //   resultContainers.style.display = "block";
     
   }
   
