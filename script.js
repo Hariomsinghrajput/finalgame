@@ -17,14 +17,12 @@ function playGame(playerChoice) {
       resultMessage = `You lose! ${computerChoice} beats ${playerChoice}.`;
     }
   
-    const resultText = document.getElementById("resulttext");
-    if (resultText) {
-      resultText.textContent = resultMessage;
-    }
-  
-    const resultContainer = document.querySelector(".resultcontainer");
-    if (resultContainer) {
-      resultContainer.style.display = "block";
-    }
+      
+    const resultTexts=document.getElementById("#resulttext") 
+     document.writeln(resultMessage)  
+     resultTexts.textContent = resultMessage;
+      const resultContainers = document.querySelector(".resultcontainer");
+      resultContainers.style.display = "block";
+    
   }
   
