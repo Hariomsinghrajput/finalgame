@@ -9,20 +9,28 @@ function playGame(playerChoice) {
       (playerChoice === "scissors" && computerChoice === "paper")
     ) {
       resultMessage = `You win! ${playerChoice} beats ${computerChoice}.`;
+      // const resultTexts=document.getElementById("resulttext") 
+      // location.href='result.html'
+      // resultTexts.textContent=resultMessage;
     } else if (
       (playerChoice === "scissors" && computerChoice === "rock") ||
       (playerChoice === "rock" && computerChoice === "paper") ||
       (playerChoice === "paper" && computerChoice === "scissors")
     ) {
       resultMessage = `You lose! ${computerChoice} beats ${playerChoice}.`;
+      // const resultTexts=document.getElementById("resulttext") 
+      // location.href='result.html'
+      // resultTexts.textContent=resultMessage;
     }
   
       
-    const resultTexts=document.getElementById("#resulttext") 
-     document.writeln(resultMessage)  
-    //  resultTexts.textContent = resultMessage;
-    //   const resultContainers = document.querySelector(".resultcontainer");
-    //   resultContainers.style.display = "block";
+    
+    //  document.writeln(resultMessage) 
+     const resultTexts=document.getElementById("resulttext") 
+    //  location.href='result.html'
+      resultTexts.textContent = resultMessage;
+     const resultContainers = document.querySelector(".resultcontainer");
+      resultContainers.style.display = "block";
     
   }
   
